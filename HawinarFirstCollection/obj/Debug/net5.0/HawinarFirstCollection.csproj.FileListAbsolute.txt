@@ -1,0 +1,16 @@
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\bin\Debug\net5.0\HawinarFirstCollection.exe
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\bin\Debug\net5.0\HawinarFirstCollection.deps.json
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\bin\Debug\net5.0\HawinarFirstCollection.runtimeconfig.json
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\bin\Debug\net5.0\HawinarFirstCollection.runtimeconfig.dev.json
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\bin\Debug\net5.0\HawinarFirstCollection.dll
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\bin\Debug\net5.0\HawinarFirstCollection.pdb
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\obj\Debug\net5.0\HawinarFirstCollection.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\obj\Debug\net5.0\HawinarFirstCollection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\obj\Debug\net5.0\HawinarFirstCollection.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\obj\Debug\net5.0\HawinarFirstCollection.AssemblyInfo.cs
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\obj\Debug\net5.0\HawinarFirstCollection.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\obj\Debug\net5.0\HawinarFirstCollection.dll
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\obj\Debug\net5.0\refint\HawinarFirstCollection.dll
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\obj\Debug\net5.0\HawinarFirstCollection.pdb
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\obj\Debug\net5.0\HawinarFirstCollection.genruntimeconfig.cache
+C:\Users\Admin\source\repos\HawinarFirstCollection\HawinarFirstCollection\obj\Debug\net5.0\ref\HawinarFirstCollection.dll
