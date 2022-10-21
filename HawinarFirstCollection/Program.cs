@@ -87,7 +87,6 @@ namespace HawinarFirstCollection
             Random rnd = new Random();
             int number = rnd.Next(99, 999999999);
             Console.WriteLine($"\nЗадание 2.22\nДано натуральное число n (n > 99)\nСлучайное число по нужным критериям уже задано: {number}");
-
             Console.WriteLine($"В числе {number} {number / 100} сотен и {number / 10} десятков");
         }
         static void Zadanie3_22()
@@ -105,12 +104,12 @@ namespace HawinarFirstCollection
             Console.WriteLine($"не (X или не Y и Z)\nРезультат:{resultA}"
                  + $"\n\nY или (X и не Y или Z);\nРезультат:{resultB}"
                  + $"\n\nне (не X и Y или Z;\nРезультат:{resultC}");
+            bool And(bool operandOne, bool operandTwo) => operandOne && operandTwo;
+            bool Or(bool operandOne, bool operandTwo) => operandOne || operandTwo;
+            bool Not(bool operandOne) => !operandOne;
+            bool Nand(bool operandOne, bool operandTwo) => !(operandOne && operandTwo);
+            bool Nor(bool operandOne, bool operandTwo) => !(operandOne || operandTwo);
         }
-        static bool And(bool operandOne, bool operandTwo) => operandOne && operandTwo;
-        static bool Or(bool operandOne, bool operandTwo) => operandOne || operandTwo;
-        static bool Not(bool operandOne) => !operandOne;
-        static bool Nand(bool operandOne, bool operandTwo) => !(operandOne && operandTwo);
-        static bool Nor(bool operandOne, bool operandTwo) => !(operandOne || operandTwo);
         static void Zadanie4_22()
         {
             Console.WriteLine($"\nЗадание 4.22\nВведите натуральное число:");
@@ -126,8 +125,10 @@ namespace HawinarFirstCollection
             float B = float.Parse(Console.ReadLine());
             Console.WriteLine("Введите сторону C");
             float C = float.Parse(Console.ReadLine());
-            if (A == B || B == C || A == C)
-                Console.WriteLine("Треугольник равнобедренний");
+            if (A == B && B == C && A == C)
+                Console.WriteLine("Треугольник неравнобедренний");
+            else if (A == B || B == C || A == C)
+                Console.WriteLine("Треугольник равнобедренний");      
             else
                 Console.WriteLine("Треугольник неравнобедренний");
         }
@@ -277,7 +278,7 @@ namespace HawinarFirstCollection
         static void Zadanie6_72()
         {
             bool isRight = true;
-            //В таком случае массив будет считаться правильным:
+            //В таком случае массив будет считаться "правильным":
             //var points = new int[] { 3, 5, 6, 6, 7, 24, 33 };
             var points = new int[] { 3, 5, 6, 6, 7, 54, 33 };
             var places = new int[] { 7, 6, 5, 4, 3, 2, 1 };
@@ -311,7 +312,7 @@ namespace HawinarFirstCollection
             int target = int.Parse(Console.ReadLine());
             for (int j = 0; j < points.Length;)
             {
-                //Пока НЕ содержит выбранное кол-во очков, сравниваем с последующими резульатами команд
+                //Пока НЕ содержит выбранное кол-во очков, сравниваем с последующими результатами команд
                 while (!points[j].ToString().Contains($"{target.ToString()}"))
                 {
                     j++;
@@ -447,12 +448,8 @@ namespace HawinarFirstCollection
             }
             count = int.MaxValue;
             for (i = 0; i < minOnCourses.Length - 1; i++)
-            {
                 if (count > minOnCourses[i])
-                {
                     count = minOnCourses[i];
-                }
-            }
             Console.WriteLine($"Меньше всего обучается на {i++} курсе: {count}");
             Console.WriteLine($"В самой малочисленной группе {course} курса, группы {group}: {minStudents}");
         }
@@ -465,17 +462,10 @@ namespace HawinarFirstCollection
             for (int i = 0; i < mass.Length - 1; i++)
             {
                 if (mass[i] == targetWeight)
-                {
                     count++;
-                }
                 for (int j = 0; j < mass.Length; j++)
-                {
-
                     if (mass[i] + mass[j] == targetWeight)
-                    {
                         count++;
-                    }
-                }
             }
             Console.WriteLine($"\n{count}");
         }
@@ -492,9 +482,7 @@ namespace HawinarFirstCollection
             Console.WriteLine("Введите один символ:");
             string symbol = Console.ReadLine();
             for (int i = 0; i < count; i++)
-            {
                 Console.Write(symbol[0]);
-            }
         }
         static void Zadanie9_72()
         {
@@ -537,10 +525,8 @@ namespace HawinarFirstCollection
             string[] words = text.Split(" ");
             string maxWord = "";
             for (int i = 0; i < words.Length - 1; i++)
-            {
                 if (maxWord.Length < words[i].Length - 1)
                     maxWord = words[i];
-            }
             Console.WriteLine($"Самое длинное слово: {maxWord}");
         }
         static void Zadanie10_22()
@@ -598,9 +584,7 @@ namespace HawinarFirstCollection
                 if (mass[i] > 0)
                     positiveCount++;
                 else
-                {
                     negativeCount++;
-                }
             }
             Console.WriteLine($"\nЗадание 11.72\nПоложительных чисел: {positiveCount}\nОтрицательных чисел: {negativeCount}");
         }
