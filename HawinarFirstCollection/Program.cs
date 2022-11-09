@@ -52,6 +52,11 @@ namespace HawinarFirstCollection
                 //Zadanie11_147();
                 //Zadanie11_172();
                 //Zadanie11_197();
+                //Zadanie11_222();
+                //Zadanie11_247();
+                //Zadanie12_22();
+                //Zadanie12_47();
+                //Zadanie11_72();
             }
             catch (Exception)
             {
@@ -726,6 +731,123 @@ namespace HawinarFirstCollection
                 }
             }
             Console.WriteLine($"\nЗадание 11.197\nВ классе есть двоечники: {haveUnderachievers}");
+        }
+        static void Zadanie11_222()
+        {
+            Random rnd = new Random();
+
+            int[] massScored = new int[20];
+            int[] massMissed = new int[20];
+
+            for (int i = 0; i < massMissed.Length; i++)
+            {
+                massScored[i] = rnd.Next(0, 10);
+                massMissed[i] = rnd.Next(0, 10);
+            }
+            //Без использования доп.массива
+            for (int j = 0; j < massMissed.Length; j++)
+            {
+                if (massScored[j] > massMissed[j])
+                    Console.WriteLine($"{j + 1}) Победа!");
+                else if (massScored[j] == massMissed[j])
+                    Console.WriteLine($"{j + 1}) Ничья!");
+                else
+                    Console.WriteLine($"{j + 1}) Поражение!");
+            }
+            //С использованием доп.массива
+            int[] massResult = new int[20];
+            for (int k = 0; k < massResult.Length; k++)
+                massResult[k] = massScored[k] - massMissed[k];
+            for (int n = 0; n < massResult.Length; n++)
+            {
+                if (massResult[n] > 0)
+                    Console.WriteLine($"{n + 1}) Победа!");
+                else if (massResult[n] == 0)
+                    Console.WriteLine($"{n + 1}) Ничья!");
+                else
+                    Console.WriteLine($"{n + 1}) Поражение!");
+            }
+        }
+        static void Zadanie11_247()
+        {
+            Random rnd = new Random();
+
+            int[] massNum1 = new int[10];
+            int[] massNum2 = new int[10];
+
+            int[] massNum3 = new int[10];
+            for (int i = 0; i < massNum1.Length; i++)
+            {
+                massNum1[i] = rnd.Next(-10, 10);
+                while (massNum1[i] == 0)
+                    massNum1[i] = rnd.Next(-10, 10);
+                massNum2[i] = rnd.Next(-10, 10);
+                while (massNum2[i] == 0)
+                    massNum2[i] = rnd.Next(-10, 10);
+            }
+            for (int j = 0; j < massNum3.Length; j++)
+            {
+                if (massNum1[j] > 0 && massNum2[j] > 0)
+                    massNum3[j] = 1;
+                else if (massNum1[j] < 0 && massNum2[j] < 0)
+                    massNum3[j] = 1;
+                else
+                    massNum3[j] = 0;
+            }
+            for (int k = 0; k < massNum3.Length; k++)
+                Console.Write(massNum3[k] + ", ");
+        }
+        static void Zadanie12_22()
+        {
+            int[,] massResult = new int[9, 9];
+            for (int i = 0; i < 9; i++)
+                for (int j = 0; j < 9; j++)
+                {
+                    massResult[i, j] = (i + 1) * (j + 1);
+                    Console.WriteLine($"{i + 1} x {j + 1} = {massResult[i, j]},");
+                }
+        }
+        static void Zadanie12_47()
+        {
+            Random rnd = new Random();
+            int result = 1;
+            int[,] mass = new int[3, 3];
+            for (int i = 0; i < 3; i++)
+                for (int j = 0; j < 3; j++)
+                    mass[i, j] = rnd.Next(1, 10);
+            for (int n = 2; n < 3; n++)
+                for (int m = 0; m < 3; m++)
+                    result *= mass[n, m];
+            Console.WriteLine(result);
+        }
+        static void Zadanie12_72()
+        {
+            Random rnd = new Random();
+            double sumEven, countLess50, CountnotEven, SumNotEven, sum3;
+            sumEven = countLess50 = CountnotEven = SumNotEven = sum3 = 0;
+            double[,] mass = new double[3, 3];
+            for (int i = 0; i < 3; i++)
+                for (int j = 0; j < 3; j++)
+                    mass[i, j] = rnd.Next(1, 100);
+            for (int i = 0; i < 3; i++)
+                for (int j = 0; j < 3; j++)
+                {
+                    if (mass[i, j] % 2 == 0)
+                        sumEven += mass[i, j];
+                    if (mass[i, j] < 50)
+                        countLess50++;
+                    if (mass[i, j] % 2 != 0)
+                    {
+                        CountnotEven++;
+                        SumNotEven += mass[i, j];
+                    }
+                    if ((i + j) % 3 == 0)
+                        sum3 += mass[i, j];
+                }
+            Console.WriteLine($"Сумма четных элементов массива: {sumEven}");
+            Console.WriteLine($"Количество элементов массива, меньших 50: {countLess50}");
+            Console.WriteLine($"Cреднее арифметическое нечетных элементов массива: {SumNotEven / CountnotEven}");
+            Console.WriteLine($"Сумма тех элементов массива, сумма индексов которых кратна трем: {sum3}");
         }
     }
 }
